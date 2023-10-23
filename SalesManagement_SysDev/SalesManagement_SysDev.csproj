@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F312C41-8A35-41B9-A847-2243F49D40F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SalesManagement_SysDev</RootNamespace>
+    <AssemblyName>SalesManagement_SysDev</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\M_MajorClassification.cs" />
+    <Compile Include="Entity\M_Product.cs" />
+    <Compile Include="F_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_login.Designer.cs">
+      <DependentUpon>F_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\M_Client.cs" />
+    <Compile Include="Entity\M_Employee.cs" />
+    <Compile Include="Entity\M_Maker.cs" />
+    <Compile Include="Entity\M_Position.cs" />
+    <Compile Include="Entity\M_SalesOffice.cs" />
+    <Compile Include="Entity\M_SmallClassification.cs" />
+    <Compile Include="hattyuukanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hattyuukanri.Designer.cs">
+      <DependentUpon>hattyuukanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kokyakukanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kokyakukanri.Designer.cs">
+      <DependentUpon>kokyakukanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nyuukokanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nyuukokanri.Designer.cs">
+      <DependentUpon>nyuukokanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entity\T_Arrival.cs" />
+    <Compile Include="Entity\T_ArrivalDetail.cs" />
+    <Compile Include="Entity\T_Chumon.cs" />
+    <Compile Include="Entity\T_ChumonDetail.cs" />
+    <Compile Include="Entity\T_Hattyu.cs" />
+    <Compile Include="Entity\T_HattyuDetail.cs" />
+    <Compile Include="Entity\T_LoginHistory.cs" />
+    <Compile Include="Entity\T_OperationHistory.cs" />
+    <Compile Include="Entity\T_Order.cs" />
+    <Compile Include="Entity\T_OrderDetail.cs" />
+    <Compile Include="Entity\T_Sale.cs" />
+    <Compile Include="Entity\T_SaleDetail.cs" />
+    <Compile Include="Entity\T_Shipment.cs" />
+    <Compile Include="Entity\T_ShipmentDetail.cs" />
+    <Compile Include="Entity\T_Stock.cs" />
+    <Compile Include="Entity\T_Syukko.cs" />
+    <Compile Include="Entity\T_SyukkoDetail.cs" />
+    <Compile Include="Entity\T_Warehousing.cs" />
+    <Compile Include="Entity\T_WarehousingDetail.cs" />
+    <Compile Include="SalesManagement_DevContext.cs" />
+    <Compile Include="syainkanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syainkanri.Designer.cs">
+      <DependentUpon>syainkanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="syouhinkanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syouhinkanri.Designer.cs">
+      <DependentUpon>syouhinkanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="syukkakanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syukkakanri.Designer.cs">
+      <DependentUpon>syukkakanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="syukkakanri2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syukkakanri2.Designer.cs">
+      <DependentUpon>syukkakanri2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="syukkokanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syukkokanri.Designer.cs">
+      <DependentUpon>syukkokanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tyuumon2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tyuumon2.Designer.cs">
+      <DependentUpon>tyuumon2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tyuumonkanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tyuumonkanri.Designer.cs">
+      <DependentUpon>tyuumonkanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uriagekanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uriagekanri.Designer.cs">
+      <DependentUpon>uriagekanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uriagekanri2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uriagekanri2.Designer.cs">
+      <DependentUpon>uriagekanri2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zaikokanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zaikokanri.Designer.cs">
+      <DependentUpon>zaikokanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zyutyuukanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zyutyuukanri.Designer.cs">
+      <DependentUpon>zyutyuukanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zyutyuukanri2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zyutyuukanri2.Designer.cs">
+      <DependentUpon>zyutyuukanri2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="F_login.resx">
+      <DependentUpon>F_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hattyuukanri.resx">
+      <DependentUpon>hattyuukanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kokyakukanri.resx">
+      <DependentUpon>kokyakukanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nyuukokanri.resx">
+      <DependentUpon>nyuukokanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="syainkanri.resx">
+      <DependentUpon>syainkanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="syouhinkanri.resx">
+      <DependentUpon>syouhinkanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="syukkakanri.resx">
+      <DependentUpon>syukkakanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="syukkakanri2.resx">
+      <DependentUpon>syukkakanri2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="syukkokanri.resx">
+      <DependentUpon>syukkokanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tyuumon2.resx">
+      <DependentUpon>tyuumon2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tyuumonkanri.resx">
+      <DependentUpon>tyuumonkanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uriagekanri.resx">
+      <DependentUpon>uriagekanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uriagekanri2.resx">
+      <DependentUpon>uriagekanri2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zaikokanri.resx">
+      <DependentUpon>zaikokanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zyutyuukanri.resx">
+      <DependentUpon>zyutyuukanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zyutyuukanri2.resx">
+      <DependentUpon>zyutyuukanri2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="tyuumon2.dgml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
